@@ -46,6 +46,60 @@ git checkout -b "votre-nom-de-branche"
 nvidia-smi  # Vous devez voir votre GPU 
 ```
 
+#### Configuration de votre serveur d'inférence
+
+Pour générer des données synthétiques, vous aurez besoin d'un serveur d'inférence pouvoir réaliser un dataset synthétique, nous allons utiliser vLLM. Pour cela lancer dans un terminal sur la machine GPU 
+```shell
+make vllm
+```
+Le setup initial peut prendre jusqu'à 5mins.
+
+Vous verrez ensuite les logs suivants une fois votre service lancé :
+
+```log
+(APIServer pid=1) INFO 09-02 04:14:57 [api_server.py:1880] Starting vLLM API server 0 on http://0.0.0.0:8000
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:36] Available routes are:
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /docs, Methods: GET, HEAD
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /health, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /load, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /ping, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /ping, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /tokenize, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /detokenize, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/models, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /version, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/responses, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/completions, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/embeddings, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /pooling, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /classify, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /score, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/score, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/audio/transcriptions, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/audio/translations, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /rerank, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v1/rerank, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /v2/rerank, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /invocations, Methods: POST
+(APIServer pid=1) INFO 09-02 04:14:57 [launcher.py:44] Route: /metrics, Methods: GET
+(APIServer pid=1) INFO:     Started server process [1]
+(APIServer pid=1) INFO:     Waiting for application startup.
+(APIServer pid=1) INFO:     Application startup complete.
+```
+
+Vous pouvez le tester en lançant une requête de test comme proposé dans 
+```shell
+make test-vllm
+```
+
 ## Ressources utiles
 
 ### Ressources supplémentaires :
