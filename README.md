@@ -127,3 +127,12 @@ make test-vllm
 - 📋 **Logs vLLM** : consultez la console où vous avez lancé le serveur
 - 🔍 **Logs Jupyter**
 - 🎮 **Monitoring GPU** : `watch -n1 nvidia-smi` dans un terminal
+
+
+## Commandes utiles
+
+```shell
+jupyter notebook password
+jupyter notebook --no-browser --ip=51.159.189.97 --port=8888 --allow-root
+```
+
