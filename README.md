@@ -44,6 +44,12 @@ git checkout -b "votre-nom-de-branche"
 
 # Vérifier la disponibilité hardware
 nvidia-smi  # Vous devez voir votre GPU 
+
+# Installer uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Installer les dépendances
+uv sync
 ```
 
 #### Configuration de votre serveur d'inférence
