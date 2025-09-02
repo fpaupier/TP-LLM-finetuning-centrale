@@ -161,3 +161,5 @@ Host ecn
     IdentitiesOnly yes
     LocalForward 7861 127.0.0.1:7861  # Forward port for trackio 
 ```
+
+Then in your VM run `trackio show` and go to `http://localhost:7861` on your browser
