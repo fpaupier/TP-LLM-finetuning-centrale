@@ -1,4 +1,4 @@
-curl http://172.17.0.1:8021/v1/completions \
+curl http://172.17.0.1:8000/v1/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer ecn-llm-token-update-this-secret" \
 -d '{
