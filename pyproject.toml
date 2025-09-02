@@ -23,3 +23,40 @@ dependencies = [
     "trl>=0.7.0",
     "unsloth>=2024.1.0",
 ]
+
+[project.optional-dependencies]
+# GPU-specific dependencies for CUDA support
+gpu = [
+    "torch>=2.0.0; index_url=https://download.pytorch.org/whl/cu121",
+    "flash-attn>=2.0.0",
+]
+
+# Development dependencies
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+# Documentation
+[tool.uv.docs]
+dependencies = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+]
+
+# Installation notes
+# For GPU support: uv sync --extra gpu
+# For development: uv sync --extra dev
+# For all extras: uv sync --all-extras
