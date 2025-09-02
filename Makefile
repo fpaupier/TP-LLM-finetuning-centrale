@@ -1,4 +1,4 @@
-.PHONY: vllm vllm-up up vllm-down down
+.PHONY: vllm vllm-up up vllm-down down test test-vllm
 
 # Start vLLM
 vllm:
@@ -12,3 +12,8 @@ vllm-down:
 	@docker ps -q --filter ancestor=vllm/vllm-openai | xargs -r docker kill
 
 down: vllm-down
+
+# Test vLLM availability
+test-vllm:
+	./scripts/test_vllm.sh
+test: test-vllm
