@@ -4,4 +4,5 @@ docker run --runtime nvidia --gpus all \
     --ipc=host \
     vllm/vllm-openai:latest \
     --api-key ecn-llm-token-update-this-secret \
+    --max-model-len 12000 \
     --model Qwen/Qwen3-4B-Instruct-2507
