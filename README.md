@@ -145,3 +145,19 @@ jupyter notebook password to protect
 jupyter notebook --no-browser --ip=51.159.189.97 --port=8888 --allow-root
 ```
 
+
+For tracking see reference on trackio [here](https://github.com/gradio-app/trackio)
+
+You might want to set up port forwarding between your VM and your local machine to access the dashboard
+
+In your dev machine ssh config (see `~/.ssh/config`): 
+
+```config
+Host ecn
+    HostName 51.159.189.97
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    LocalForward 7861 127.0.0.1:7861  # Forward port for trackio 
+```
