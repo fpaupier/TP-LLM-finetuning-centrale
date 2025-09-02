@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .idea/
 data/
+notebooks/unsloth_compiled_cache/*
 # C extensions
 *.so
 
