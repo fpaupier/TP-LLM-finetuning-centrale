@@ -21,5 +21,6 @@ dependencies = [
     "bitsandbytes>=0.46.0",
     "trl>=0.7.0",
     "unsloth>=2025.8.0",
+    "trackio>=0.1.0",
 ]
 
