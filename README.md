@@ -54,6 +54,7 @@ nvidia-smi  # Vous devez voir votre GPU
 - 📖 [Guide LoRA/QLoRA](https://huggingface.co/blog/peft)
 - 📖 [Best Practices Model Cards](https://huggingface.co/docs/hub/model-cards)
 - 📖 [vLLM Documentation](https://docs.vllm.ai/en/stable/)
+- 📖 [LLM Course de Maxime Labonne](https://github.com/mlabonne/llm-course)
 
 ### Défis bonus (optionnels) :
 
