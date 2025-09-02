@@ -105,6 +105,7 @@ make test-vllm
 ### Ressources supplémentaires :
 
 - 📖 [Documentation Unsloth](https://github.com/unslothai/unsloth)
+- 📖 [Generate synthetic data for evaluating RAG systems](https://aws.amazon.com/blogs/machine-learning/generate-synthetic-data-for-evaluating-rag-systems-using-amazon-bedrock/)
 - 📖 [Guide LoRA/QLoRA](https://huggingface.co/blog/peft)
 - 📖 [Best Practices Model Cards](https://huggingface.co/docs/hub/model-cards)
 - 📖 [vLLM Documentation](https://docs.vllm.ai/en/stable/)
