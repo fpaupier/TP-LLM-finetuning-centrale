@@ -1,0 +1,7 @@
+[project]
+name = "tp-llm-finetuning-centrale"
+version = "0.1.0"
+description = "Explore synth dataset generation and LLM finetuning"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
