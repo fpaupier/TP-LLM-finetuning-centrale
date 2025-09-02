@@ -6,6 +6,7 @@ __pycache__/
 data/
 notebooks/unsloth_compiled_cache/*
 notebooks/lora_finetuned_model/*
+models/*
 # C extensions
 *.so
 
