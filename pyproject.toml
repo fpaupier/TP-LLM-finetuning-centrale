@@ -1,62 +1,25 @@
 [project]
 name = "tp-llm-finetuning-centrale"
 version = "0.1.0"
-description = "Explore synth dataset generation and LLM finetuning"
+description = "Experiment with synth dataset generation and LLM finetuning"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "datasets>=2.16.0",
-    "openai>=1.7.0",
-    "pandas>=2.0.0",
-    "numpy>=1.24.0",
-    "tqdm>=4.65.0",
-    "jupyter>=1.0.0",
-    "ipywidgets>=8.0.0",
-    "matplotlib>=3.6.0",
-    "seaborn>=0.12.0",
-    "python-dotenv>=1.0.0",
-    "torch>=2.0.0",
-    "transformers>=4.35.0",
-    "accelerate>=0.24.0",
-    "peft>=0.5.0",
-    "bitsandbytes>=0.41.0",
+    "datasets>=3.4.0",
+    "openai>=1.102.0",
+    "pandas>=2.3.0",
+    "numpy>=2.3.0",
+    "tqdm>=4.67.1",
+    "jupyter>=1.1.0",
+    "ipywidgets>=8.1.0",
+    "matplotlib>=3.10.0",
+    "seaborn>=0.13.2",
+    "torch>=2.7.0",
+    "transformers>=4.55.0",
+    "accelerate>=1.10.0",
+    "peft>=0.17.0",
+    "bitsandbytes>=0.46.0",
     "trl>=0.7.0",
-    "unsloth>=2024.1.0",
+    "unsloth>=2025.8.0",
 ]
 
-[project.optional-dependencies]
-# GPU-specific dependencies for CUDA support
-gpu = [
-    "torch>=2.0.0; index_url=https://download.pytorch.org/whl/cu121",
-    "flash-attn>=2.0.0",
-]
-
-# Development dependencies
-dev = [
-    "pytest>=7.0.0",
-    "black>=23.0.0",
-    "isort>=5.12.0",
-    "flake8>=6.0.0",
-    "mypy>=1.0.0",
-]
-
-[tool.uv]
-dev-dependencies = [
-    "pytest>=7.0.0",
-    "black>=23.0.0",
-    "isort>=5.12.0",
-    "flake8>=6.0.0",
-    "mypy>=1.0.0",
-]
-
-# Documentation
-[tool.uv.docs]
-dependencies = [
-    "mkdocs>=1.5.0",
-    "mkdocs-material>=9.0.0",
-]
-
-# Installation notes
-# For GPU support: uv sync --extra gpu
-# For development: uv sync --extra dev
-# For all extras: uv sync --all-extras
