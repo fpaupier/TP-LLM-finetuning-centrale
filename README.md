@@ -139,7 +139,7 @@ make test-vllm
 
 ```shell
 # To set a password to protect your instance
-jupyter notebook password to protect 
+jupyter notebook password
 
 # To expose your notebook - make sure to update with your host IP
 jupyter notebook --no-browser --ip=51.159.189.97 --port=8888 --allow-root
